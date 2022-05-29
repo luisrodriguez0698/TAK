@@ -1,0 +1,17 @@
+.img_logo img{
+    width: 50%;
+    height: 50%;
+
+}
+
+.estado-no-disponible-ID{
+    color: #ec1010;
+}
+
+.estado-disponible-ID{
+    color: #20c51b;
+}
+
+.flex{
+    display: flex !important;
+}
