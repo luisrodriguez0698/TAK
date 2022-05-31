@@ -10,6 +10,8 @@ function BorrarDatosModal(Tabla){
      });
 }
 
+
+
 function AgregarDatos(var1,var2,var3,var4,Tabla){
         cadena= "var1=" + var1 +
                 "&var2=" + var2 +
@@ -25,7 +27,7 @@ function AgregarDatos(var1,var2,var3,var4,Tabla){
         success:function(r){
             console.log(r);
             if(r==1){
-                $('#Tabla').load('componentes/tabla_'+NTabla+'.php?Tabla='+NTabla);
+                $('#Tabla').load('componentes/Tabla_'+NTabla+'.php?Tabla='+NTabla);
                 Swal.fire({
                     icon: 'success',
                     title: 'Datos guardados correctamente',
@@ -75,9 +77,9 @@ function ActualizarDatos(Tabla){
         url:"php/ActualizarDatos.php",
         data: cadena,
         success:function(r){
-
+            console.log(r);
             if(r==1){
-                $('#Tabla').load('componentes/tabla_'+NTabla+'.php?Tabla='+NTabla);
+                $('#Tabla').load('componentes/Tabla_'+NTabla+'.php?Tabla='+NTabla);
                 Swal.fire({
                     icon: 'success',
                     title: 'Datos actualizados correctamente',
@@ -143,12 +145,13 @@ function EliminarDatos(id, Tabla){
 }
 
 
-function GNFormula(id_pt,id,id1,Tabla){
-    cadena= "id_pt="+id_pt+
-            "&id="+id+
-            "&id1="+id1+
-            "&Tabla="+Tabla;
-    NTabla = Tabla; 
+function GNFormula(var1,var2,var3,var4,Tabla){
+        cadena= "var1=" + var1 +
+                "&var2=" + var2 +
+                "&var3=" + var3 +
+                "&var4=" + var4 +
+                "&Tabla=" + Tabla;
+                NTabla = Tabla;
 
     $.ajax({
         type:"POST",

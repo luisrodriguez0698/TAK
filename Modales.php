@@ -276,7 +276,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">AGREGAR CATEGORIA</h5>
+        <h5 class="modal-title" id="exampleModalLabel">AGREGAR INGREDIENTE</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -300,6 +300,12 @@
           <div class="form-group">
             <label>Stock</label>
             <input type="text" class="form-control" id="Mv2_a_materia_prima" name="" placeholder="Ingrese cantidad">
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="form-group">
+            <label>Precio Compra</label>
+            <input type="text" class="form-control" id="Mv3_a_materia_prima" name="" placeholder="Ingrese cantidad">
           </div>
         </div>
       </div>
@@ -377,7 +383,7 @@
   
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" id="GN_Formula" class="btn btn-primary">Guardar Categoria</button>
+        <button type="button" id="GNformula" class="btn btn-primary">Guardar Categoria</button>
       </div>
     </div>
   </div>

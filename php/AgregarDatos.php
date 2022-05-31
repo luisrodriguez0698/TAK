@@ -8,7 +8,6 @@
 
 	$Tabla =$_POST['Tabla'];
 
-
 	switch ($Tabla) {
 		case 'categoria':
 			
@@ -33,8 +32,8 @@
 
 		case 'formula':
 
-			$sql = $base_de_datos->prepare("INSERT INTO formula (id_f,id_pt,id_mp,cantidad) VALUES (?, ?, ?, ?);");
-			$sql2 = $sql -> execute([$var1, $var2, $var3, $var4]);
+			$sql = $base_de_datos->prepare("INSERT INTO formula (id_pt,id_mp,cantidad) VALUES (?, ?, ?);");
+			$sql2 = $sql -> execute([$var1, $var2, $var3]);
 		
 		break;
 
