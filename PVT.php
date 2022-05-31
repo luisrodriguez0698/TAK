@@ -7,9 +7,6 @@
   require_once 'Modales.php';
 ?>
 
-
-
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -43,12 +40,10 @@
   <script src="js/popper.min.js" ></script>
 
 
-
-
   <script type="text/javascript">
       $(document).ready(function(){
 		    $('#Tabla').load('componentes/Tabla_<?php echo $NTabla; ?>.php?Tabla=<?php echo $NTabla; ?>');
-
+        
 	   });
 
   </script>

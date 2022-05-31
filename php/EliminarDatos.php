@@ -31,7 +31,7 @@
 		break;
 	}
 
-	if($sql2 === TRUE){
+	if($sql2 == true){
        echo "1";
 	}else{
        echo "2";

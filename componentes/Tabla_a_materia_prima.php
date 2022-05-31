@@ -124,6 +124,7 @@
 
 <script>
           $(function () {
+            $("#example1").dataTable().fnDestroy();//EVITA ERROR DE REFRESCAR TABLA
             $("#example1").DataTable({
               "responsive": true, "lengthChange": false, "autoWidth": false,
               "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]

@@ -127,7 +127,7 @@
               console.log(var2);
               console.log(var3);
 
-              //AgregarDatos(var1,var2,var3,"",Tabla);
+              AgregarDatos(var1,var2,var3,"",Tabla);
             }
 
           <?php 
@@ -141,6 +141,7 @@
 
         <script>
           $(function () {
+            $("#example1").dataTable().fnDestroy();//EVITA ERROR DE REFRESCAR TABLA
             $("#example1").DataTable({
               "responsive": true, "lengthChange": false, "autoWidth": false,
               "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]

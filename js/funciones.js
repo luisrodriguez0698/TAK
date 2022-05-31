@@ -1,4 +1,3 @@
-
 function BorrarDatosModal(Tabla){
     NTabla = Tabla;
     const $ventanaModal = $('#'+NTabla);
@@ -9,7 +8,6 @@ function BorrarDatosModal(Tabla){
         $formulario[0].reset();
      });
 }
-
 
 
 function AgregarDatos(var1,var2,var3,var4,Tabla){
@@ -122,12 +120,12 @@ function EliminarDatos(id, Tabla){
 
     $.ajax({
         type:"POST",
-        url:"php/eliminarDatos.php",
+        url:"php/EliminarDatos.php",
         data:cadena,
         success:function(r){
             console.log(r);
             if(r==1){
-                $('#Tabla').load('componentes/tabla_'+NTabla+'.php?Tabla='+NTabla);
+                $('#Tabla').load('componentes/Tabla_'+NTabla+'.php?Tabla='+NTabla);
                 Swal.fire({
                     icon: 'success',
                     title: 'Datos eliminado correctamente',

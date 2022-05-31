@@ -111,6 +111,7 @@
 
         <script>
           $(function () {
+            $("#example1").dataTable().fnDestroy();//EVITA ERROR DE REFRESCAR TABLA
             $("#example1").DataTable({
               destroy: true,
               "responsive": true, "lengthChange": false, "autoWidth": false,
