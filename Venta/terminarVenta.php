@@ -5,6 +5,7 @@ date_default_timezone_set('America/Mexico_City');
 session_start();
 
 $total = $_POST["total"];
+$id_pt = $_POST['id_pt'];
 include_once "base_de_datos.php";
 
 $ahora = date("Y-m-d H:i:s");
@@ -18,6 +19,8 @@ $sentencia->execute();
 $resultado = $sentencia->fetch(PDO::FETCH_OBJ);
 
 $idVenta = $resultado === false ? 1 : $resultado->id;
+
+$queryALMACEN = $base_de_datos->prepare("SELECT id_pt, id_mp, cantidad")
 
 $base_de_datos->beginTransaction();
 $sentencia = $base_de_datos->prepare("INSERT INTO productos_vendidos(id_producto, id_venta, cantidad) VALUES (?, ?, ?);");

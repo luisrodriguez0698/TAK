@@ -59,7 +59,7 @@
             $ingrediente=$SQLONEVER[0];
             $complemento=$SQLONEVER[1];
             $cafe=$SQLONEVER[2];
-            $azucar=$SQLONEVER[3];  
+            $azucar=$SQLONEVER[3]; 
 
                 $SQLTWO="SELECT id_mp FROM almacen_mp WHERE codigo = '$ingrediente' OR codigo ='$complemento' OR codigo='$cafe' OR codigo='$azucar'";
                 $SQLTWOQ=mysqli_query($con, $SQLTWO);

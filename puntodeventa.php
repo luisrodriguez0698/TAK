@@ -274,7 +274,7 @@
                   </table>
 
                   <h3>Total: <?php echo $granTotal; ?></h3>
-                  <form action="Venta/terminarVenta.php" method="POST">
+                  <form action="Venta/terminarVenta.php?id_pt=<?php echo $producto->id_pt; ?>" method="POST">
                     <input name="total" type="hidden" value="<?php echo $granTotal;?>">
                     <button type="submit" class="btn btn-success">Terminar venta</button>
                     <a href="Venta/cancelarVenta.php" class="btn btn-danger">Cancelar venta</a>
